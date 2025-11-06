@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kai Admin Upload</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+    .container { max-width: 500px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
+    h2 { text-align: center; }
+    input, button { width: 100%; margin-bottom: 10px; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
+    button { background: #333; color: #fff; border: none; cursor: pointer; }
+    ul { list-style: none; padding-left: 0; }
+    li.success { color: green; margin-bottom: 5px; }
+    li.error { color: red; margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Kai Admin Upload</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul>
+          {% for category, msg in messages %}
+            <li class="{{ category }}">{{ msg }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="post" enctype="multipart/form-data">
+      <input type="text" name="business_id" placeholder="Enter Business ID" required>
+      <input type="file" name="files" multiple required>
+      <button type="submit">Upload</button>
+    </form>
+
+    <p>Currently only PDF files are supported.</p>
+  </div>
+</body>
+</html>

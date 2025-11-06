@@ -1,0 +1,204 @@
+                            ADMI M MODULE  
+ 
+THIS IS A VERY IMPORTANT STEP . EVERYTHING HAS TO BE FILLED IN ACCORDINGLY .  
+Steps  
+1. Locate the Admin tab  — found on the far right  of the main navigation.  
+2. Open Admin  — click the Admin  tab. 
+3. View options  — the Admin page will display various configuration options.  
+ 
+ 
+ 
+company details.  
+ 
+Man age company details.  
+When you click on Company Details in the Admin Module.  
+Steps:  
+1. Click on Company Details  under the Admin  tab. 
+2. You will see two sections  displayed:  
+o Manage Company Details  
+o Manage Branch  
+Make sure that all details entered are true and accurate . 
+
+ 
+To add a branch under Manage Branch . 
+Steps:  
+1. Scroll down to the Manage Branch  section under Company Details . 
+2. Click on the Add button.  
+3. You will be redirected to a new page called the Branch Page . 
+ 
+Steps:  
+1. On the Branch Page , you will see two parts — the top section  and several tabs  at the bottom.  
+2. The bottom section includes the following tabs: Staff , Teams , Warehouse , Tote , API Leadtime , and Banking Details . 
+3. Start by filling in all the required details in the top section . 
+4. If the company operates globally , make sure the Global  option is turned on. 
+5. If the company operates locally , leave the Global  option off. 
+ 
+Staff tab  
+To add staff members  from this specific branch that will have ac cess to Prismdx . 
+Steps:  
+1. Click on the Staff  tab on the Branch Page.  
+
+2. Click on the Add button.  
+3. Add each staff member who will have access to the PrismDX system individually . 
+Team  
+To add teams under the Teams tab in PrismDX.  
+Steps:  
+1. Click on the Teams  tab on the Branch Page.  
+2. Click on the Add button.  
+3. Add all the teams relevant to your company individually.  
+Warehouse  
+To add warehouse details under the Warehouse tab in PrismDX.  
+Steps:  
+1. Click on the Warehouse  tab on the Branch Page.  
+2. Click on the Add button.  
+3. Enter all warehouse details accurately, including location and any other required information.  
+Tote  
+To add tote information under the Tote tab in PrismDX.  
+Steps:  
+1. Click on the Tote  tab on the Branch Page.  
+2. Click on the Add button.  
+3. Enter all tote details as required.  
+API Lea dTime  
+Automatically generated.  
+Banking de tails  
+Steps:  
+1. Click on the Banking Details  tab on the Branch Page.  
+2. Click on the Add button.  
+3. Enter all the correct banking details for the branch.  
+4. Review the information carefully to ensure accuracy before saving.  
+This the company  banking details and can be more t hat one.  
+Company de tails will appear on the invoice that you sen d to your customer.  
+ 
+ 
+ 
+ 
+ 
+Numbering   
+ 
+Steps:  
+1. Open PrismDX on your computer and go to the section where you manage your unique numbering codes . This is 
+where you will create codes for different items or categories within the system.  
+2. Once in this section, you will see a Type  field with a drop -down menu  next to it. Click on the drop -down menu to view 
+the different areas or items that require unique codes.  
+3. For each item listed under the drop -down menu, you need to set up a unique code . These codes help you organize and 
+identify various elements such as products, parts, customers, or other entities that need to be tracked separately.  
+4. When setting up your codes, you have the option to decide whether each code will be Auto Assigned  or Manually 
+Assigned : 
+o If you choose Auto Assigned  (recommended), PrismDX will automatically generate the next available code 
+based on your sequence. This ensures consistency and avoids duplication.  
+o If you choose Manually Assigned , you will enter the codes yourself. This option provides flexibility if you have a 
+custom numbering system already in place.  
+5. To create a new code, select the appropriate Type  from the drop -down list, then either allow the system to auto -
+generate it or input your own unique code manually.  
+6. Review each code entry to ensure that it follows your company’s coding format and that there are no duplicates or 
+errors.  
+7. Once all your codes have been set up, save your changes  to apply the numbering system across the platform.  
+8. You can edit your codes at any time  if you need to make changes or add new items later. To do this, simply return to 
+the same section, select the code type, and make the necessary updates.  
+9. It is recommended to keep a short reference list of your codes and their meanings for internal use. This helps your 
+team maintain consistency and understand what each code represents.  
+By following these steps, you ensure that your PrismDX system maintains a clean and organized structure, making it easier to 
+search, manage, and track information efficiently.  
+Staff  
+To manage staff under the Staff tab . 
+Steps:  
+1. Click on the Staff  tab on the Branch Page.  
+2. This section will display a list of all staff members across your entire company . 
+3. From here, you can view, edit, or remove  existing staff members as needed.  
+4. To add a new staff member, click on the Add button.  
+5. Enter the required details for the new staff member and save your changes.  
+6. Use this tab anytime you need to manage staff access  or update staff information within the PrismDX system.  
+
+ 
+ 
+Job position  
+To set up job positions . 
+Steps:  
+1. Go to the Job Position  section within the Admin Module.  
+2. This is where you define the job titles  that exist within your company.  
+3. Click on the Add button to create a new job position.  
+4. Enter the job title  and any relevant details or descriptions.  
+5. Save the entry once all information has been filled in.  
+6. These job positions will later be linked to staff members , allowing you to assign each person the correct role within the 
+system.  
+ 
+Currencies  
+To manage currencies . 
+Steps:  
+1. Go to the Currencies  section within the Admin Module.  
+2. This section allows you to manage, add, delete, or edit  the currencies your company will use when working with 
+different clients.  
+3. To add a new currency , click on the Add button and select the currency you want to include.  
+4. To edit an existing currency, click on it, make the necessary changes, and save your updates.  
+5. To delete  a currency, select it from the list and click on the Delete  option.  
+6. Review your list of active currencies to ensure that only the ones relevant to your business and clients are enabled.  
+ 
+ 
+
+Industries  
+To manage industries . 
+Steps:  
+1. Go to the Industries  section within the Admin Module.  
+2. This section allows you to manage, edit, or delete  the industries your company will be working with.  
+3. To add a new industry , click on the Add button and enter the industry name and any relevant details.  
+4. To edit an existing industry, select it from the list, update the information as needed, and save your changes.  
+5. To delete  an industry, choose it from the list and click on the Delete  option.  
+6. Review your list of industries regularly to ensure it accurately reflects the sectors your company is involved in.  
+ 
+ 
+Lead Times  
+To set and manage lead times . 
+Steps:  
+1. Go to the Lead Times  tab within the Admin Module.  
+2. This section allows you to set your delivery times or days , also known as lead times.  
+3. To add a new lead time, click on the Add button and enter the delivery duration or schedule.  
+4. To edit an existing lead time, select it from the list, update the information, and save your changes.  
+5. To delete  a lead time, select it and click on the Delete  option.  
+6. Review all lead times to ensure they accurately reflect your company’s delivery schedules and commitments.  
+ 
+ 
+ 
+
+Machine Types  
+ 
+ 
+Steps:  
+1. Go to the Machine Types  section within the Admin Module.  
+2. This section allows you to manage all the machine types  your company may have as part of its inventory.  
+3. To add a new machine type, click on the Add button and enter the machine name (e.g., CAT, ESCO , CASE , etc.).  
+4. To edit a machine type, select it from the list, make the necessary updates, and save your changes.  
+5. To delete  a machine type, choose it from the list and click on the Delete  option.  
+6. Keep this list updated to ensure that all machine types in your inventory are accurate and relevant.  
+ 
+Price Models  
+ 
+ 
+You can set the minimum margin %  
+How is margin calculated:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+TarrifCodes  
+ 
+Templates  
+ 
+Manage VAT.  
+VAT values. You can also manage this . Just click Edit on the value you want to edit.  
+ 
+ 
+
