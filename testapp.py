@@ -16,14 +16,14 @@ app.secret_key = os.getenv("FLASK_SECRET_KEY", "supersecret123")
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # -----------------------
-# Helper function
+# Helper function PDF ONLY
 # -----------------------
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route("/")
 def home():
-    return render_template("test.html")
+    return render_template("index.html")
 # -----------------------
 # Admin portal
 # -----------------------

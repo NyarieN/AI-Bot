@@ -1,10 +1,11 @@
 // ---------------------------
-// Dynamic Kai Widget (AI INTEGRATION) goes with index.html
+// Unified Kai Widget
 // ---------------------------
 
-// Get business ID from the script tag
+// Get business ID and mode
 const scriptTag = document.getElementById("kai-widget");
 const BUSINESS_ID = scriptTag ? scriptTag.getAttribute("data-business") : "default";
+const AI_MODE = scriptTag ? scriptTag.getAttribute("data-ai") === "true" : false;
 window.KAI_BUSINESS_ID = BUSINESS_ID;
 
 // Create floating bubble
@@ -43,8 +44,7 @@ Object.assign(chatWindow.style, {
   display: "none",
   flexDirection: "column",
   zIndex: 9998,
-  boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-  fontFamily: "Arial, sans-serif"
+  boxShadow: "0 4px 12px rgba(0,0,0,0.15)"
 });
 document.body.appendChild(chatWindow);
 
@@ -54,13 +54,14 @@ messages.id = "messages";
 Object.assign(messages.style, {
   flex: "1",
   padding: "10px",
-  overflowY: "auto"
+  overflowY: "auto",
+  fontFamily: "Arial, sans-serif"
 });
 chatWindow.appendChild(messages);
 
-// Welcome message
+// ---------- Welcome message ----------
 const welcomeMsg = document.createElement("div");
-Object.assign(welcomeMsg.style, {
+Object.assign(welcomeMsg.style, { 
     margin: "5px 0",
     textAlign: "left",
     backgroundColor: "#f0f0f0",
@@ -108,11 +109,17 @@ function sendMessage() {
   userInput.value = "";
   scrollToBottom();
 
-  // Send to backend /ask
-  fetch("/ask", {
+  // Decide which backend route
+  const route = AI_MODE ? "/ask" : "/query";
+
+  fetch(route, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ business_id: BUSINESS_ID, message: text })
+    body: JSON.stringify({
+      business_id: BUSINESS_ID,
+      message: text,
+      question: text // used for PDF mode
+    })
   })
   .then(res => res.json())
   .then(data => {
@@ -124,16 +131,16 @@ function sendMessage() {
         padding: "8px 10px",
         borderRadius: "8px",
         maxWidth: "80%",
-        wordWrap: "break-word"
+        wordWrap: "break-word" 
     });
-    botMsg.innerHTML = `${data.reply}`;
+    botMsg.innerHTML = `${data.reply || data.answer}`;
     messages.appendChild(botMsg);
     scrollToBottom();
   })
   .catch(err => {
     const botMsg = document.createElement("div");
     Object.assign(botMsg.style, { margin: "5px 0", textAlign: "left" });
-    botMsg.innerHTML = `Sorry, something went wrong.`;
+    botMsg.innerHTML = `<b>Kai:</b> Sorry, something went wrong.`;
     messages.appendChild(botMsg);
     scrollToBottom();
     console.error(err);
@@ -141,7 +148,9 @@ function sendMessage() {
 }
 
 sendButton.addEventListener("click", sendMessage);
-userInput.addEventListener("keypress", (e) => { if(e.key === "Enter") sendMessage(); });
+userInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") sendMessage();
+});
 
 function scrollToBottom() {
   messages.scrollTop = messages.scrollHeight;
