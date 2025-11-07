@@ -21,6 +21,9 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
+@app.route("/")
+def home():
+    return render_template("test.html")
 # -----------------------
 # Admin portal
 # -----------------------
@@ -106,9 +109,7 @@ def query_kai():
 # -----------------------
 # Home route
 # -----------------------
-@app.route("/test")
-def test_widget():
-    return render_template("test.html")
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
