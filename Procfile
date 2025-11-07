@@ -1,2 +1,2 @@
-web: gunicorn ${APP_FILE:-app}:app
+web: gunicorn testapp:app
 
