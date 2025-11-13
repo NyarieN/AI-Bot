@@ -66,7 +66,7 @@ load_dotenv()
 # Config
 # -----------------------
 app = Flask(__name__)
-app.secret_key = os.getenv("FLASK_SECRET_KEY", "supersecret123")
+app.secret_key = os.getenv("FLASK_SECRET_KEY", "anysecret")
 
 ROOT_UPLOADS = "uploads"
 ROOT_EMBEDDINGS = "embeddings"
@@ -375,7 +375,7 @@ def query_pdf():
             sims = cosine_similarity(q_vec, matrix).flatten()
 
             if len(sims) == 0 or np.max(sims) < 0.05:
-                return jsonify({"answer": "I couldn’t find a relevant answer in your documents."})
+                return jsonify({"answer": "I could not find a relevant answer in the documents."})
 
             best_idx = int(np.argmax(sims))
             best_match = docs[best_idx]
@@ -389,13 +389,13 @@ def query_pdf():
             best_sentence = max(
                 sentences,
                 key=lambda s: sum(word in s.lower() for word in question.split()),
-                default="I could not find an answer in the documents."
+                default="I could not find a relevant answer for you in the documents."
             )
             return jsonify({"answer": best_sentence})
 
     except Exception as e:
         print(f"Query error for {business_id}: {e}")
-        return jsonify({"answer": f"Error: {e}"})
+        return jsonify({"answer": f"I could not find a relevant answer for you. {e}"})
 
 # -----------------------
 # AI (chat) route
@@ -476,7 +476,7 @@ def ask_ai():
         return jsonify({"reply": best_sentence})
     except Exception as e:
         app.logger.warning(f"Local fallback (ask) failed: {e}")
-        return jsonify({"reply": "Sorry, something went wrong while processing your request."})
+        return jsonify({"reply": "Sorry, something went wrong while processing your request.Please contact customersupport@prismdx.com"})
 
 # -----------------------
 # Regenerate Embeddings (Admin Only)

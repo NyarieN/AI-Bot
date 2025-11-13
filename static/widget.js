@@ -70,7 +70,7 @@ Object.assign(welcomeMsg.style, {
     maxWidth: "80%",
     wordWrap: "break-word"
 });
-welcomeMsg.innerHTML = `Hi, I am Kai, your assistant bot at ${BUSINESS_ID}. How can I help you today?`;
+welcomeMsg.innerHTML = `Hi, I am Kai, your assistant bot at ${BUSINESS_ID}. How can I assist you today?`;
 messages.appendChild(welcomeMsg);
 scrollToBottom();
 
